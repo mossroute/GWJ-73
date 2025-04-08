@@ -1,0 +1,64 @@
+[gd_scene load_steps=9 format=3 uid="uid://1eb0rn7cm365"]
+
+[ext_resource type="Script" path="res://da world/swoopable.gd" id="1_7eh17"]
+[ext_resource type="Texture2D" uid="uid://iwowyk5mif3y" path="res://resources/sprites/pidgeon(16).png" id="2_hct6a"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lbcuj"]
+radius = 38.0132
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_id4di"]
+atlas = ExtResource("2_hct6a")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ail7x"]
+atlas = ExtResource("2_hct6a")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_350ym"]
+atlas = ExtResource("2_hct6a")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3lqss"]
+atlas = ExtResource("2_hct6a")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ojapc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_id4di")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ail7x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_350ym")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3lqss")
+}],
+"loop": true,
+"name": &"highlight",
+"speed": 5.0
+}]
+
+[node name="swoopable" type="Area2D"]
+script = ExtResource("1_7eh17")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_lbcuj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ojapc")
+animation = &"highlight"
+autoplay = "fly"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

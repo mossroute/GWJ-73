@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://36v3be1ca5p6"
+path="res://.godot/imported/THIS IS THE ONE.wav-a3b15bf22146665e9b1f56cf625e89b4.sample"
+
+[deps]
+
+source_file="res://resources/sounds/THIS IS THE ONE.wav"
+dest_files=["res://.godot/imported/THIS IS THE ONE.wav-a3b15bf22146665e9b1f56cf625e89b4.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

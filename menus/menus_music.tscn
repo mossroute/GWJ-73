@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://be5i32qc4tuag"]
+
+[ext_resource type="AudioStream" uid="uid://36v3be1ca5p6" path="res://resources/sounds/THIS IS THE ONE.wav" id="1_cl0sg"]
+[ext_resource type="Script" path="res://menus music.gd" id="2_r37ej"]
+
+[node name="menus music" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_cl0sg")
+autoplay = true
+bus = &"music"
+script = ExtResource("2_r37ej")

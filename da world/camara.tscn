@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://beb8se5ylorfv"]
+
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="1_371qj"]
+[ext_resource type="Script" path="res://da world/camara.gd" id="1_ojx81"]
+[ext_resource type="AudioStream" uid="uid://b0es7dbec8sag" path="res://resources/sounds/sfx/cut shotgun sound.wav" id="3_pstuc"]
+
+[node name="camara" type="Camera2D"]
+script = ExtResource("1_ojx81")
+
+[node name="PhantomCameraHost" type="Node" parent="."]
+script = ExtResource("1_371qj")
+
+[node name="cooldown" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[node name="catchsound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_pstuc")
+
+[connection signal="timeout" from="cooldown" to="." method="_on_cooldown_timeout"]

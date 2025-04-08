@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bopwsvp3s20a1"
+path="res://.godot/imported/Impact 059.wav-f1e91d0be07f070553d929bb605bc368.sample"
+
+[deps]
+
+source_file="res://resources/sounds/sfx/Impact 059.wav"
+dest_files=["res://.godot/imported/Impact 059.wav-f1e91d0be07f070553d929bb605bc368.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=true
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=false
+edit/loop_mode=1
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
